@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "JilJ2P4G0peOdYSv8bEYkCLWRSM7w5tbFtSuBscWpbjHAlz80z25pgHCqgNb/UbdK7GYPS7C8oxOB+SAd9DXeA==",
+  "success": true,
+  "projectFilePath": "C:\\Projects\\bmw-platform\\Services\\BmwSales.Api\\BmwSalesPlatform\\BmwSalesPlatform.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ramla\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Ramla\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Ramla\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Ramla\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Ramla\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Ramla\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
