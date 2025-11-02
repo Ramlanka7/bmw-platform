@@ -23,19 +23,22 @@ GO
 
 CREATE TABLE Staging.BmwSalesRaw
 (
-    BmwSalesRawId   BIGINT IDENTITY(1,1) PRIMARY KEY,
-    YearTxt         NVARCHAR(10)   NULL,
-    MonthTxt        NVARCHAR(20)   NULL,    -- "1..12" or "January.."
-    Model           NVARCHAR(100)  NULL,
-    Series          NVARCHAR(50)   NULL,
-    BodyStyle       NVARCHAR(50)   NULL,
-    FuelType        NVARCHAR(50)   NULL,
-    Transmission    NVARCHAR(50)   NULL,
-    Engine          NVARCHAR(100)  NULL,
-    Region          NVARCHAR(100)  NULL,
-    Country         NVARCHAR(100)  NULL,
-    SalesUnitsTxt   NVARCHAR(50)   NULL,
-    SourceFile      NVARCHAR(260)  NULL,
-    ImportedAtUtc   DATETIME2(0)   NOT NULL CONSTRAINT DF_BmwSalesRaw_ImportedAtUtc DEFAULT (SYSUTCDATETIME())
+    BmwSalesRawId    BIGINT IDENTITY(1,1) PRIMARY KEY,
+
+    [Year]           SMALLINT       NULL,
+    [Model]          NVARCHAR(100)  NULL,
+    [Region]         NVARCHAR(100)  NULL,
+    [Color]          NVARCHAR(50)   NULL,
+    [FuelType]       NVARCHAR(50)   NULL,
+    [Transmission]   NVARCHAR(50)   NULL,
+    [EngineSizeL]    FLOAT          NULL,
+    [MileageKM]      INT            NULL,
+    [PriceUSD]       INT            NULL,
+    [SalesVolume]    INT            NULL,
+    [SalesClass]     NVARCHAR(50)   NULL,
+
+    SourceFile       NVARCHAR(260)  NULL,
+    ImportedAtUtc    DATETIME2(0)   NOT NULL 
+                      CONSTRAINT DF_BmwSalesRaw_ImportedAtUtc DEFAULT (SYSUTCDATETIME())
 );
 GO
