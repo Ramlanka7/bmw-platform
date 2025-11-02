@@ -10,6 +10,13 @@ The import is performed in two steps:
 2. **Conversion script to load into standardized staging table**
 
 Once the wizard import completes successfully, run the conversion script:
-Database/Scripts/Load/Insert_W_Sales_Into_BmwSalesRaw.sql
+Database/Scripts/Load/Load_Tables_From_Staging.sql
+
+
+3. **ETL script to populate Dimension and Fact tables**  
+After the staging table (`Staging.BmwSalesRaw`) is populated, run the ETL script to load data into all core Dimension and Fact tables
+
+This completes the initial data load from raw CSV → standardized staging → dimensional data warehouse.
+
 
 
