@@ -1,3 +1,8 @@
+using BmwSales.Api.Data;
+using BmwSales.Api.Services;
+using BmwSalesPlatform.Data.Interfaces;
+using BmwSalesPlatform.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +11,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddSingleton<ISqlConnectionFactory, SqlConnectionFactory>();
+builder.Services.AddScoped<ISalesRepository, SalesRepository>();
+builder.Services.AddScoped<ISalesService, SalesService>();
 
 var app = builder.Build();
 
