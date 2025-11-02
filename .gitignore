@@ -1,0 +1,112 @@
+##########################################################
+# .NET / Visual Studio / VS Code Git Ignore
+# For BMW Sales Platform Monorepo
+##########################################################
+
+# --- Build Folders ---
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+build/
+dist/
+
+# --- Visual Studio Specific ---
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# --- Package Management ---
+# NuGet packages
+*.nupkg
+# The packages folder can be ignored because of package restore
+**/packages/*
+# except build/, which is used as an MSBuild target
+!**/packages/build/
+# if using dotnet restore
+project.lock.json
+project.fragment.lock.json
+
+# --- ASP.NET Generated Files ---
+wwwroot/lib/
+wwwroot/dist/
+wwwroot/node_modules/
+node_modules/
+
+# --- Logs and Temp Files ---
+*.log
+*.tlog
+*.tmp
+*.bak
+*.old
+*.cache
+*.swp
+*.swo
+
+# --- SQL Server / SSMS ---
+*.mdf
+*.ldf
+*.ndf
+*.bak
+*.trn
+*.dacpac
+*.bacpac
+*.sqlproj.user
+Database/Backup/
+Database/Temp/
+Database/__pycache__/
+
+# --- Environment & Config ---
+.env
+.env.*
+secrets.json
+appsettings.Development.json
+local.settings.json
+
+# --- OS Generated Files ---
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+desktop.ini
+
+# --- Testing & Coverage ---
+TestResults/
+*.coverage
+*.coveragexml
+*.trx
+*.testsettings
+*.vsmdi
+*.log
+*.log.*
+*.tmp
+*.dmp
+
+# --- Python / Scripts (if any ETL scripts later) ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env/
+venv/
+.envrc
+.venv/
+pip-wheel-metadata/
+
+# --- GitHub Actions Cache ---
+.github/workflows/*.log
+.github/workflows/*.tmp
+
+# --- Misc ---
+# Local-only readme or notebooks
+*.ipynb_checkpoints
+*.local
