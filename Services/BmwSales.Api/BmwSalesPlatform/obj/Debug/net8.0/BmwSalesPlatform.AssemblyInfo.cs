@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BmwSalesPlatform")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4331b9cefd5a6396654ad64f38f5604cf543301b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a640e0f6973542d80c72ef459d594f01d2de89b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("BmwSalesPlatform")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BmwSalesPlatform")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
