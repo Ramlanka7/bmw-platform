@@ -1,3 +1,6 @@
+USE BmwSalesDw;
+GO
+
 CREATE OR ALTER PROC usp_Sales_GetRegionalMix
   @Year SMALLINT = NULL
 AS
