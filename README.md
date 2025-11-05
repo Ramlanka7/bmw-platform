@@ -90,6 +90,7 @@ Call getTopModels tool:
 Call getRegionalMix tool: 
 {"jsonrpc":"2.0","id":"5","method":"tools/call","params":{"name":"getRegionalMix","arguments":{"year":2024}}}
 
+---
 
 🔗 Integrating via ChatGPT or LLM client
 
