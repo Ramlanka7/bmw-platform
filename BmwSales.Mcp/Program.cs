@@ -17,12 +17,8 @@ var host = Host.CreateDefaultBuilder(args)
     .ConfigureLogging(lb => lb.AddConsole())
     .ConfigureServices((ctx, services) =>
     {
-        //var asdf = Environment.GetEnvironmentVariable("BMWSALES_CS");
-        //var cs = Environment.GetEnvironmentVariable("BMWSALES_CS")
-        //         ?? ctx.Configuration.GetConnectionString("BmwSalesDw")
-        //         ?? throw new InvalidOperationException("Connection string not found.");
-
-        var cs = ctx.Configuration.GetConnectionString("BmwSalesDw");
+        var cs = ctx.Configuration.GetConnectionString("BmwSalesDw")
+                 ?? throw new InvalidOperationException("Connection string not found.");
 
         services.AddSingleton<ISqlConnectionFactory>(new SqlConnectionFactory(cs));
 
