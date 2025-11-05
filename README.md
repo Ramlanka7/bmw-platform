@@ -75,10 +75,20 @@ It enables AI assistants (e.g., ChatGPT or other LLMs) to call specialized tools
 
 Example calls:
 
-Initialize handshake: {"jsonrpc":"2.0","id":"1","method":"initialize","params":{}}
-List available tools: {"jsonrpc":"2.0","id":"2","method":"tools/list","params":{}}
-Call getYearTotals tool: {"jsonrpc":"2.0","id":"3","method":"tools/call","params":{"name":"getYearTotals","arguments":{}}}
-Call getTopModels tool: {"jsonrpc":"2.0","id":"4","method":"tools/call","params":{"name":"getTopModels","arguments":{"year":2024,"page":1,"pageSize":10}}}
-Call getRegionalMix tool: {"jsonrpc":"2.0","id":"5","method":"tools/call","params":{"name":"getRegionalMix","arguments":{"year":2024}}}
+Initialize handshake: 
+{"jsonrpc":"2.0","id":"1","method":"initialize","params":{}}
+
+List available tools: 
+{"jsonrpc":"2.0","id":"2","method":"tools/list","params":{}}
+
+Call getYearTotals tool: 
+{"jsonrpc":"2.0","id":"3","method":"tools/call","params":{"name":"getYearTotals","arguments":{}}}
+
+Call getTopModels tool: 
+{"jsonrpc":"2.0","id":"4","method":"tools/call","params":{"name":"getTopModels","arguments":{"year":2024,"page":1,"pageSize":10}}}
+
+Call getRegionalMix tool: 
+{"jsonrpc":"2.0","id":"5","method":"tools/call","params":{"name":"getRegionalMix","arguments":{"year":2024}}}
+
 
 
