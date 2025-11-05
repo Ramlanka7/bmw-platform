@@ -91,4 +91,17 @@ Call getRegionalMix tool:
 {"jsonrpc":"2.0","id":"5","method":"tools/call","params":{"name":"getRegionalMix","arguments":{"year":2024}}}
 
 
+🔗 Integrating via ChatGPT or LLM client
+
+To integrate your MCP server with ChatGPT or another LLM that supports MCC (Model Context Protocol):
+
+Host the MCP server so it’s reachable (or use a local client that spawns the process via stdio)
+
+Use the MCP handshake (initialize) and tool list (tools/list) to register the tools
+
+The LLM will automatically send tools/call requests based on user prompts
+
+The server returns structured JSON results which the model uses to reply to the user
+
+
 
