@@ -51,3 +51,34 @@ Returns the top-selling BMW models for a given year, with support for pagination
 
 ### 3️⃣ `/api/sales/regions/mix`
 Shows the regional distribution of BMW sales for a selected year.
+
+
+---
+
+# BMW Sales Data — MCP Server
+
+This is the **MCP Server** for the BMW Sales Data Platform.  
+It enables AI assistants (e.g., ChatGPT or other LLMs) to call specialized tools for querying the BMW sales warehouse via the Model Context Protocol (MCP) over JSON-RPC.
+
+---
+
+## 🔍 What it does
+
+- Exposes three tools via MCP:
+  1. `getYearTotals` — returns total sales per year  
+  2. `getTopModels` — returns top-selling BMW models (filter by year, with pagination)  
+  3. `getRegionalMix` — returns sales by region for a given year  
+- Uses SQL Server stored procedures behind the scenes to fetch data from `BmwSalesDw`  
+- Runs as a console application, communicating over **stdin/stdout** using JSON-RPC (MCP transport)  
+- Allows seamless integration with LLMs and agent workflows, providing structured data access in a standard format  
+
+
+Example calls:
+
+Initialize handshake: {"jsonrpc":"2.0","id":"1","method":"initialize","params":{}}
+List available tools: {"jsonrpc":"2.0","id":"2","method":"tools/list","params":{}}
+Call getYearTotals tool: {"jsonrpc":"2.0","id":"3","method":"tools/call","params":{"name":"getYearTotals","arguments":{}}}
+Call getTopModels tool: {"jsonrpc":"2.0","id":"4","method":"tools/call","params":{"name":"getTopModels","arguments":{"year":2024,"page":1,"pageSize":10}}}
+Call getRegionalMix tool: {"jsonrpc":"2.0","id":"5","method":"tools/call","params":{"name":"getRegionalMix","arguments":{"year":2024}}}
+
+
